@@ -17,4 +17,9 @@ export interface SingleMovieInterface {
     imdbID?: string;
     Type?: string;
     Response?: string;
+    imdbVotes?: string,
+    Metascore?: string,
+    BoxOffice?: string,
+    Production?: string,
+    Website?: string,
 }

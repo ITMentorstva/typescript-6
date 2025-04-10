@@ -1,4 +1,5 @@
 import {SingleMovieInterface} from "../interfaces/SingleMovieInterface";
+import {showMovieDetails} from "./showMovieDetails";
 
 export function listMovieResults(movies: SingleMovieInterface[], htmlMovieList: HTMLElement): void {
 
@@ -15,7 +16,16 @@ export function listMovieResults(movies: SingleMovieInterface[], htmlMovieList: 
         const movieHolder = document.createElement("div") as HTMLDivElement;
         movieHolder.append(movieTitle, moviePoster);
 
+        const viewSingleMovieButton = document.createElement("button") as HTMLButtonElement;
+        viewSingleMovieButton.textContent = "Details";
+        viewSingleMovieButton.setAttribute("data-imdb-id", <string> movie.imdbID);
+        movieHolder.append(viewSingleMovieButton);
+
         htmlMovieList.append(movieHolder);
 
-    })
+        viewSingleMovieButton.addEventListener("click", async () => {
+            showMovieDetails(<string> movie.imdbID);
+        });
+
+    });
 }

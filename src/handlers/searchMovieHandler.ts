@@ -3,7 +3,7 @@ import {ApiResponseErrorInterface} from "../interfaces/ApiResponseErrorInterface
 import {rememberMovieSearch} from "../repository/movieStorage";
 import {renderPreviousSearches} from "../ui/renderPreviousSearches";
 import {ApiSuccessInterface} from "../interfaces/ApiSuccessInterface";
-import {listMovieResults} from "../helpers/movieElementHelper";
+import {listMovieResults} from "../ui/listMovieResults";
 
 
 export async function searchMovieHandler() {

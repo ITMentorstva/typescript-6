@@ -1,7 +1,7 @@
 import {getAllMovieSearches} from "../repository/movieStorage";
 import {callOMDBApi} from "../services/omdbApiService";
 import {ApiSuccessInterface} from "../interfaces/ApiSuccessInterface";
-import {listMovieResults} from "../helpers/movieElementHelper";
+import {listMovieResults} from "./listMovieResults";
 
 
 export function renderPreviousSearches(): void {
