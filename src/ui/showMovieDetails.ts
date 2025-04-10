@@ -15,6 +15,8 @@ export async function showMovieDetails(imdbId: string) {
         return;
     }
 
+    popupInner.innerHTML = "";
+
     singleMoviePopup.style.display = "flex";
     
     const data = response.data as SingleMovieInterface;
