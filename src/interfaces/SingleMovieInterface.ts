@@ -1,4 +1,3 @@
-
 export interface SingleMovieInterface {
     Title?: string;
     Year?: string;

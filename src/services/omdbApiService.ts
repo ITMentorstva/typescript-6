@@ -13,7 +13,7 @@ function buildUrl(params: ApiParametersInterface[]): string {
         searchParams += `${params.key}=${params.value}&`;
     });
 
-    return API_URL+"?"+searchParams+"apikey="+API_KEY;
+    return API_URL + "?" + searchParams + "apikey=" + API_KEY;
 }
 
 export async function callOMDBApi(params: ApiParametersInterface[]): Promise<ApiResponseInterface> {

@@ -1,15 +1,13 @@
-
-
 export function rememberMovieSearch(movie: SingleMovieSearch): void {
 
     const existingMovies = getAllMovieSearches();
 
-    const alreadyExists:boolean = existingMovies.some((m: SingleMovieSearch) =>
+    const alreadyExists: boolean = existingMovies.some((m: SingleMovieSearch) =>
         m.name.toLowerCase() === movie.name.toLowerCase()
         && m.year === movie.year
     );
 
-    if(alreadyExists) {
+    if (alreadyExists) {
         return;
     }
 

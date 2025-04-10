@@ -1,14 +1,16 @@
+export function generateYears(from: number, defaultYear: null | number): void {
 
-export function generateYears(from: number, selectElement: HTMLSelectElement, defaultYear: null | number): void {
-    for(let i = 1960; i <= 2025; i++) {
+    const yearSelect = document.getElementById("movieYears") as HTMLSelectElement;
+
+    for (let i = 1960; i <= 2025; i++) {
         const singleYear = document.createElement("option");
         singleYear.value = i.toString();
         singleYear.textContent = i.toString();
 
-        if(i === defaultYear) {
+        if (i === defaultYear) {
             singleYear.selected = true;
         }
 
-        selectElement.append(singleYear);
+        yearSelect.append(singleYear);
     }
 }
